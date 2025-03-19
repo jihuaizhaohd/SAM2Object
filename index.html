@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SAI3D: Segment Any Instance in 3D Scenes</title>
+  <!-- Bootstrap -->
+  <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="css/index.css">
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family: 'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+
+<!-- cover -->
+<section>
+  <div class="jumbotron text-center mt-0">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h2 style="font-size:40px;"><b>SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation</b></h2> <br>
+          <h2 style="font-size:30px;">CVPR2025</h2>
+          <hr>
+          <h5>
+            <br>
+            <a href="https://jihuaizhaohd.github.io/">Jihuai Zhao</a>&nbsp; &nbsp; &nbsp;
+            <a href="https://scholar.google.com/citations?user=iBt9uHUAAAAJ">Junbao Zhuo</a><sup>*</sup>&nbsp; &nbsp; &nbsp;
+            <a href="https://scholar.google.com/citations?user=A1gA9XIAAAAJ">Jiansheng Chen</a>&nbsp; &nbsp; &nbsp;
+            <a href="https://scholar.google.com.hk/citations?user=32hwVLEAAAAJ&hl">Huimin Ma</a><sup>*</sup>&nbsp; &nbsp; &nbsp;
+
+          </h5>
+            <br>
+            <p> University of Science and Technology Beijing &nbsp; &nbsp;
+
+              <br>
+            </p>
+            <p>
+              <sup>*</sup> Corresponding authors.
+              <br><br>
+            </p>
+            <div class="row justify-content-center">
+              <div class="column">
+                <p class="mb-5">
+                  <a class="btn btn-large btn-light disabled" href="#" role="button" style="pointer-events: none; color: gray; background-color: #ccc;">
+                      <i class="fa fa-file"></i> ArXiv (Coming soon)
+                  </a>
+              </p>
+              </div>
+              <div class="column">
+                  <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/jihuaizhaohd/SAM2Object" role="button" target="_blank" disabled=1>
+                <i class="fa fa-github-alt"></i> Code </a> </p>
+              </div>
+            </div>
+            
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section>
+  <div class="container" style="width:70%" id="main-video">
+    <div class="row">
+      <div class="col-12">
+        <div class="row justify-content-center" style="align-items:center; display:flex;">
+          <!-- <img src="images/teaser.png" width="90%" height="500px" > -->
+          <img src="images/teaser.jpg" width="80%" >
+          <!-- <iframe src="images/teaser4_00.png" width="100%" height="600px" ></iframe> -->
+          <!-- <video id="main-video" autobuffer muted autoplay loop controls>
+            <source src="videos/teaser.mp4" type="video/mp4">
+          </video> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+<br>
+<!-- <br> -->
+
+<!-- abstract -->
+<section>
+  <div class="container" style="width:70%">
+    <div class="row">
+      <div class="col-12">
+        <h3><strong>Abstract</strong></h3>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          In the field of zero-shot 3D instance segmentation, existing 2D-to-3D lifting methods typically obtain 2D segmentation across multiple RGB frames using vision foundation models, which are then projected and merged into 3D space. 
+          However, since the inference of vision foundation models on a single frame is not integrated with adjacent frames, the masks of the same object may vary across different frames, leading to a lack of view consistency in the 2D segmentation. 
+          Furthermore, current lifting methods average the 2D segmentation from multiple views during the projection into 3D space, causing low-quality masks and high-quality masks to share the same weight. 
+          These factors can lead to fragmented 3D segmentation. In this paper, we present SAM2Object, a novel zero-shot 3D instance segmentation method that effectively utilizes the Segment Anything Model 2 to segment and track objects, consolidating view consistency across frames. 
+          Our approach combines these consistent 2D masks with 3D geometric priors, improving the robustness of 3D segmentation. Additionally, we introduce mask consolidation module to filter out low-quality masks across frames, which enables more precise 3D-to-2D matching. 
+          Comprehensive evaluations on ScanNetV2, ScanNet++ and ScanNet200 demonstrate the robustness and effectiveness of SAM2Object, showcasing its ability to outperform previous methods.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+<!-- method -->
+<section>
+  <div class="container" style="width:70%">
+    <div class="row">
+      <div class="col-12">
+        <h3><strong>Method</strong></h3>
+        <hr style="margin-top:0px">
+        <div style="text-align: center;">
+        <img src="images/pipeline.jpg" width="85%">
+        </div>
+        <br >
+        <br >
+        <p class="text-justify">
+          Our method consists of six steps. We over-segment the 3D mesh / point cloud into superpoints. 
+          <b>(a)</b> We extract keyframes from posed images. <b>(b)</b> We leverage SAM2 to segment the keyframes, and its segmentation serve as mask prompts to prompt SAM2 to track objects throughout the entire set of posed images. 
+          <b>(c)</b> We consolidate the consistency of the masks obtained by SAM2 to filter out low-quality mask proposals. 
+          <b>(d)</b> We combine the masks with 3D geometric priors to construct a graph, where the nodes are superpoints and the edges represent the affinity scores between masks of superpoints that have undergone consistency consolidation. 
+          <b>(e)</b> We perform iterative graph clustering on the graph to achieve 3D instance segmentation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<br>
+<br>
+
+
+
+<section>
+  <div class="container" style="width:70%">
+    <div class="row">
+      <div class="col-12">
+        <h3><strong>Qualitative Results</strong></h3>
+        <hr style="margin-top:0px">
+        <p class="text-justify">
+          Coming soon...
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Contact -->
+<div class="container" style="width:70%">
+  <div class="row ">
+    <div class="col-12">
+      <h3><strong>Contact</strong></h3>
+      <hr style="margin-top:0px">
+      <p>Please feel free to contact <a href="https://jihuaizhaohd.github.io/">Jihuai Zhao</a>.
+      </p>
+      </pre>
+    </div>
+  </div>
+</div>
+
+<footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+  <hr>
+  Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a
+    href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -15,11 +15,21 @@
       font-family: 'Open Sans', sans-serif;
     }
 
-    /* --- 新增样式：为选中的缩略图按钮添加蓝色边框 --- */
     .thumbnail-btn.active {
         border: 3px solid #007bff; /* 使用Bootstrap的蓝色主题色 */
         border-radius: 8px; /* 轻微的圆角，使其看起来更柔和 */
         box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 可选：添加一点光晕效果 */
+    }
+
+    /* --- 新增样式：用于BibTeX代码块 --- */
+    .bibtex-code {
+      background-color: #f7f7f7; /* 浅灰色背景 */
+      padding: 1em;             /* 内边距 */
+      border-radius: 5px;       /* 圆角 */
+      white-space: pre-wrap;    /* 自动换行 */
+      word-break: break-all;    /* 长单词断行 */
+      font-family: monospace;   /* 使用等宽字体 */
+      border: 1px solid #eee;   /* 浅色边框 */
     }
   </style>
 
@@ -31,7 +41,7 @@
       <div class="row">
         <div class="col">
           <h2 style="font-size:40px;"><b>SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation</b></h2> <br>
-          <h2 style="font-size:30px;">CVPR2025</h2>
+          <h2 style="font-size:30px;">CVPR 2025</h2>
           <hr>
           <h5>
             <br>
@@ -94,7 +104,7 @@
           However, since the inference of vision foundation models on a single frame is not integrated with adjacent frames, the masks of the same object may vary across different frames, leading to a lack of view consistency in the 2D segmentation. 
           Furthermore, current lifting methods average the 2D segmentation from multiple views during the projection into 3D space, causing low-quality masks and high-quality masks to share the same weight. 
           These factors can lead to fragmented 3D segmentation. In this paper, we present SAM2Object, a novel zero-shot 3D instance segmentation method that effectively utilizes the Segment Anything Model 2 to segment and track objects, consolidating view consistency across frames. 
-          Our approach combines these consistent 2D masks with 3D geometric priors, improving the robustness of 3D segmentation. Additionally, we introduce mask consolidation module to filter out low-quality masks across frames, which enables more precise 3D-to-2D matching. 
+          Our approach combines these consistent 2D masks with 3D geometric priors, improving the robustness of 3D segmentation. Additionally, we introduce a mask consolidation module to filter out low-quality masks across frames, which enables more precise 3D-to-2D matching. 
           Comprehensive evaluations on ScanNetV2, ScanNet++ and ScanNet200 demonstrate the robustness and effectiveness of SAM2Object, showcasing its ability to outperform previous methods.
         </p>
       </div>
@@ -123,7 +133,7 @@
           <b>(e)</b> We perform iterative graph clustering on the graph to achieve 3D instance segmentation.
         </p>
 
-        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -214,7 +224,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
 
         <div class="scene" id="scannetpp_09c1">
@@ -225,7 +235,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
 
 
@@ -237,7 +247,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
 
 
@@ -249,7 +259,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
 
 
@@ -261,7 +271,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
 
         <div class="scene" id="scannet0046_00">
@@ -272,10 +282,8 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
-
-        
 
         <div class="scene" id="scannet0565_00">
           <h4><strong>3D Instance Segmentation</strong></h4>
@@ -285,26 +293,30 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          </div>
+        </div>
 
       </div>
     </div>
   </div>
 </section>
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@InProceedings{Zhao_2025_CVPR,
+<div class="container" style="width:70%">
+    <div class="row">
+      <div class="col-12">
+        <h3><strong>BibTeX</strong></h3>
+        <hr style="margin-top:0px">
+        <pre class="bibtex-code"><code>@InProceedings{Zhao_2025_CVPR,
     author    = {Zhao, Jihuai and Zhuo, Junbao and Chen, Jiansheng and Ma, Huimin},
     title     = {SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation},
     booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
     month     = {June},
     year      = {2025},
     pages     = {19325-19334}
-  }</code></pre>
-  </div>
-</section>
+      }</code></pre>
+      </div>
+    </div>
+</div>
+<br>
 
 <div class="container" style="width:70%">
   <div class="row ">

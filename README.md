@@ -1,8 +1,3 @@
-# SAM2Object
-[CVPR 2025] SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation
-
-
-The code is coming soon...
 # [CVPR 2025] SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation
 
  [Jihuai Zhao](https://jihuaizhaohd.github.io/), [Junbao Zhuo<sup>*</sup>](https://scholar.google.com/citations?user=iBt9uHUAAAAJ) [Jiansheng Chen](https://scholar.google.com/citations?user=A1gA9XIAAAAJ), [Huimin Ma<sup>*</sup>](https://scholar.google.com.hk/citations?user=32hwVLEAAAAJ&hl)
@@ -67,3 +62,4 @@ data
 ```
 
 
+The code is coming soon...

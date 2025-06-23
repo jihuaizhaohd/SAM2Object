@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation</title>
-  <!-- Bootstrap -->
   <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="css/index.css">
@@ -15,11 +14,17 @@
       background: rgb(255, 255, 255) no-repeat fixed top left;
       font-family: 'Open Sans', sans-serif;
     }
+
+    /* --- 新增样式：为选中的缩略图按钮添加蓝色边框 --- */
+    .thumbnail-btn.active {
+        border: 3px solid #007bff; /* 使用Bootstrap的蓝色主题色 */
+        border-radius: 8px; /* 轻微的圆角，使其看起来更柔和 */
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 可选：添加一点光晕效果 */
+    }
   </style>
 
 </head>
 
-<!-- cover -->
 <section>
   <div class="jumbotron text-center mt-0">
     <div class="container-fluid">
@@ -70,22 +75,14 @@
     <div class="row">
       <div class="col-12">
         <div class="row justify-content-center" style="align-items:center; display:flex;">
-          <!-- <img src="images/teaser.png" width="90%" height="500px" > -->
           <img src="images/teaser.jpg" width="80%" >
-          <!-- <iframe src="images/teaser4_00.png" width="100%" height="600px" ></iframe> -->
-          <!-- <video id="main-video" autobuffer muted autoplay loop controls>
-            <source src="videos/teaser.mp4" type="video/mp4">
-          </video> -->
-        </div>
+          </div>
       </div>
     </div>
   </div>
   </div>
 </section>
 <br>
-<!-- <br> -->
-
-<!-- abstract -->
 <section>
   <div class="container" style="width:70%">
     <div class="row">
@@ -107,7 +104,6 @@
 <br>
 <br>
 
-<!-- method -->
 <section>
   <div class="container" style="width:70%">
     <div class="row">
@@ -127,17 +123,7 @@
           <b>(e)</b> We perform iterative graph clustering on the graph to achieve 3D instance segmentation.
         </p>
 
-        <!-- <div style="text-align: center;">
-        <img src="images/st.png" width="85%">
         </div>
-        <br >
-        <br >
-        <p class="text-justify">
-          <b>(a)</b> We extract keyframes from posed images. <b>(b)</b> We use the keyframes segmentation as mask prompts to guide SAM2 in tracking objects in both directions. 
-          <b>(c)</b> We merge the results to ensure that no objects are missed.
-        </p> -->
-
-      </div>
     </div>
   </div>
 </section>
@@ -146,7 +132,6 @@
 
 
 
-<!-- scene_selector -->
 <section>
   <div class="container" style="width:100%">
     <div class="row">
@@ -229,9 +214,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
         <div class="scene" id="scannetpp_09c1">
@@ -242,9 +225,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
 
@@ -256,9 +237,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
 
@@ -270,9 +249,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
 
@@ -284,9 +261,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
         <div class="scene" id="scannet0046_00">
@@ -297,9 +272,7 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-        </div>
+          </div>
 
 
         
@@ -312,20 +285,13 @@
           <p style="text-align:center">
             <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
           </p>
-          <!-- <br>
-          <br> -->
-
-
-          
-
-        </div>
+          </div>
 
       </div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
 <div class="container" style="width:70%">
   <div class="row ">
     <div class="col-12">
@@ -345,6 +311,16 @@
 </footer>
 
 <script src="js/script.js"></script>
+
+<script>
+  // 等待页面的HTML结构完全加载后执行此脚本
+  document.addEventListener('DOMContentLoaded', function() {
+    // 调用您在 script.js 中已有的函数来选择一个场景
+    // 我们将希望默认显示的场景ID 'scannetpp_5ff9' 作为参数传入
+    // 这会触发显示对应场景内容、并高亮其缩略图的逻辑
+    select_one_scene_view1('scannetpp_5ff9');
+  });
+</script>
 
 </body>
 </html>

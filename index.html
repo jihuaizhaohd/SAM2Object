@@ -47,11 +47,9 @@
             </p>
             <div class="row justify-content-center">
               <div class="column">
-                <p class="mb-5">
-                  <a class="btn btn-large btn-light disabled" href="#" role="button" style="pointer-events: none; color: gray; background-color: #ccc;">
-                      <i class="fa fa-file"></i> ArXiv (Coming soon)
-                  </a>
-              </p>
+                <p class="mb-5"><a class="btn btn-large btn-light" href="https://openaccess.thecvf.com/content/CVPR2025/html/Zhao_SAM2Object_Consolidating_View_Consistency_via_SAM2_for_Zero-Shot_3D_Instance_CVPR_2025_paper.html" role="button"
+                    target="_blank">
+                    <i class="fa fa-file"></i> Paper </a> </p>
               </div>
               <div class="column">
                   <p class="mb-5"><a class="btn btn-large btn-light" id="code_soon" href="https://github.com/jihuaizhaohd/SAM2Object" role="button" target="_blank" disabled=1>
@@ -137,22 +135,178 @@
 
 
 
+<!-- scene_selector -->
 <section>
-  <div class="container" style="width:70%">
+  <div class="container" style="width:100%">
     <div class="row">
       <div class="col-12">
-        <h3><strong>Qualitative Results</strong></h3>
+        <h3><strong>Qualitative Results on ScanNet++/ScanNet</strong></h3>
         <hr style="margin-top:0px">
-        <p class="text-justify">
-          Coming soon...
-        </p>
+
+        <b>Click the thumbnails below to select scenes.</b>
+        <div class="base-row" style="display: inline-block">
+          <button class="slide-arrow" id="slide-arrow-prev" onclick="slide_left()">
+              &#8249;
+          </button>
+          <div class="base-row thumbnail-row" , id="thumbnails-scroll">
+
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannetpp_13c3')">
+                  <img src="images/thumbnails/13c3.jpg" class="thumbnails" />
+                  ScanNet++ 13c3
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannetpp_3f15')">
+                  <img src="images/thumbnails/3f15.jpg" class="thumbnails" />
+                  ScanNet++ 3f15
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannetpp_6115')">
+                  <img src="images/thumbnails/6115.jpg" class="thumbnails" />
+                  ScanNet++ 6115
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannetpp_5ee7')">
+                  <img src="images/thumbnails/5ee7.jpg" class="thumbnails" />
+                  ScanNet++ 5ee7
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannet0549_00')">
+                  <img src="images/thumbnails/0549.jpg" class="thumbnails" />
+                  ScanNet 0549_00
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannet0426_00')">
+                  <img src="images/thumbnails/0426.jpg" class="thumbnails" />
+                  ScanNet 0426_00
+              </button>
+            </div>
+            <div class="base-col thumbnail-col">
+              <button class="thumbnail-btn" id="thumb-0" onclick="select_one_scene_view1('scannet0011_00')">
+                  <img src="images/thumbnails/0011.jpg" class="thumbnails" />
+                  ScanNet 0011_00
+              </button>
+            </div>
+          </div>
+          <button class="slide-arrow" id="slide-arrow-next" onclick="slide_right()">
+              &#8250;
+          </button>
+        </div>
       </div>
     </div>
   </div>
 </section>
+<br>
+<br>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+
+
+        <div class="scene" id="scannetpp_13c3">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center">
+            <iframe title="ScanNetpp 13c3" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-13c3e046d7-2c3cef76d34d439aa8847714daa27735/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe>
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+        <div class="scene" id="scannetpp_3f15">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNetpp 3f15" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-3f15a9266d-bb34372cabc34c1e9425268aa1e07c9b/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
 
 
 
+        <div class="scene" id="scannetpp_6115">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNetpp 6115" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannetpp-6115eddb86-2798d2c887ac401897aabcc01e660026/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+
+        <div class="scene" id="scannetpp_5ee7">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNetpp 5ee7" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-5ee7c22ba0-ee6470734a9644799f1b7a723e320e54/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+
+        <div class="scene" id="scannet0549_00">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNet 0549_00" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-0549-00-3deb9d35b2404da4990b0fd0bb848bfc/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+        <div class="scene" id="scannet0426_00">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNet 0426_00" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-0426-00-e67c72959de343019bff2b9bedf1e026/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+        
+
+        <div class="scene" id="scannet0011_00">
+          <h4><strong>3D Instance Segmentation</strong></h4>
+          <div class="sketchfab-embed-wrapper" width="80%" style="text-align:center"> 
+            <iframe title="ScanNet 0011_00" style="clip-path: inset(1px 1px)" width="50%" height="360" src="https://sketchfab.com/3d-models/scannet-0011-00-2aa24d05311a459c9e9403c2f2968579/embed?autospin=0.2&autostart=1&camera=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture; fullscreen" mozallowfullscreen="true" webkitallowfullscreen="true"> </iframe> 
+          </div>
+          <p style="text-align:center">
+            <b >Left click to rotate, right click to translate, scroll wheel to zoom.</b>
+          </p>
+          <!-- <br>
+          <br> -->
+
+
+          
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- Contact -->
 <div class="container" style="width:70%">

@@ -72,12 +72,12 @@ data
  │   |   │   └── ...
 ```
 
-Generate the "color_images_cluster" , which contains the processed RGB image sequences derived from 20% of the ScanNet.
+Generate the `color_images_cluster` , which contains the processed RGB image sequences derived from 20% of the ScanNet.
 ```bash
 cd segtrack
 python dataprocess/extract_only_jpg.py
 ```
-Generate the "posed_images"
+Generate the `posed_images`
 ```bash
 cd segtrack
 python dataprocess/get_posed_images.py

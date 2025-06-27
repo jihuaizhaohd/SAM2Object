@@ -35,7 +35,7 @@ pip install -e .
 
 Download the pretrained SAM 2 checkpoints:
 ```bash
-cd checkpoints
+cd segtrack/checkpoints
 bash download_ckpts.sh
 ```
 

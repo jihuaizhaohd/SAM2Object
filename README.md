@@ -21,7 +21,7 @@ We present SAM2Object, a novel zero-shot 3D instance segmentation method that ef
 
 ### Installation
 
-Prepare environment
+Prepare environment:
 
 ```bash
 conda create -n sam2object python=3.8
@@ -62,6 +62,9 @@ data
  │   ├── scans
  │   |   ├── scene0000_00
  │   |   └── ...
+ │   ├── color_images_cluster
+ │   |   ├── scene0000_00
+ │   |   └── ...
  │   ├── Tasks
  │   |   ├── Benchmark
  │   |   │   ├──scannetv2_val.txt  
@@ -69,5 +72,26 @@ data
  │   |   │   └── ...
 ```
 
+Generate the "color_images_cluster" , which contains the processed RGB image sequences derived from 20% of the ScanNet.
+```bash
+cd segtrack
+python dataprocess/extract_only_jpg.py
+```
+Generate the "posed_images"
+```bash
+cd segtrack
+python dataprocess/get_posed_images.py
+```
 
-The code is coming soon...
+### Get class-agnostic masks
+1. **Obtain 2D SAM2 results**
+   
+   run:
+   ```bash
+   cd segtrack
+   python seg_tracking.py
+   ```
+   The results will be stored at `segtrack/outputs`.
+
+
+The code will be updated within 5 days.

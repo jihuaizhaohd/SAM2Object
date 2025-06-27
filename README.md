@@ -29,10 +29,15 @@ conda activate sam2object
 pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
 pip install open3d natsort matplotlib tqdm opencv-python scipy plyfile
 # Install SAM2
-git clone https://github.com/facebookresearch/sam2.git && cd sam2
+cd segtrack
 pip install -e .
 ```
 
+Download the pretrained SAM 2 checkpoints:
+```bash
+cd checkpoints
+bash download_ckpts.sh
+```
 
 
 

@@ -82,6 +82,14 @@ Generate the `posed_images`
 cd segtrack
 python dataprocess/get_posed_images.py
 ```
+Convert the results of `segtrack` for graph clustering. The results will be stored at `/YourPath/ScanNet/2D_masks`.
+
+```bash
+cd segtrack
+python mask_convert.py
+```
+
+
 
 ### Get class-agnostic masks
 1. **Obtain 2D SAM2 results**

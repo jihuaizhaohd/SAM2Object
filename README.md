@@ -93,7 +93,12 @@ python dataprocess/get_posed_images.py
    ```
    The results will be stored at `segtrack/outputs`. `result*` folders: Store the visualizations of the masks overlaid on the images. `mask*` folders: Store the raw mask files. The suffixes on these folders denote the tracking direction: `No suffix`: Results from forward tracking. `_rev` suffix: Results from backward tracking. `_merge` suffix: Merged results from bidirectional tracking.
 
+2. **Obtain superpoints**
+   For ScanNet, superpoints are already provided in `scans/<scene_id>/<scene_id>_vh_clean_2.0.010000.segs.json`
 
+   To generate superpoint on mesh of other dataset, following [SAI3D](https://github.com/yd-yin/SAI3D/), we also use the mesh segmentator provided by ScanNet directly. Please check [here](https://github.com/ScanNet/ScanNet/tree/master/Segmentator) to see the usage.
+
+3. **Final 3D instance segmentation**
 
 
 The code will be updated within 5 days.

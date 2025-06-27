@@ -99,9 +99,12 @@ python dataprocess/get_posed_images.py
    To generate superpoint on mesh of other dataset, following [SAI3D](https://github.com/yd-yin/SAI3D/), we also use the mesh segmentator provided by ScanNet directly. Please check [here](https://github.com/ScanNet/ScanNet/tree/master/Segmentator) to see the usage.
 
 3. **Final 3D instance segmentation**
+   Get final 3D instance segmentation by using the following command:
+   ```bash
+   cd graphclustering
+   bash scripts/seg_scannet.sh
+   ```
 
-
-The code will be updated within 5 days.
 
 ### Citation
 If you find our work helpful for your research, please consider citing our paper.

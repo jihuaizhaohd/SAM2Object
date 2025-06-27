@@ -102,3 +102,15 @@ python dataprocess/get_posed_images.py
 
 
 The code will be updated within 5 days.
+
+### Citation
+If you find our work helpful for your research, please consider citing our paper.
+```BibTex
+@inproceedings{zhao2025sam2object,
+  title={SAM2Object: Consolidating View Consistency via SAM2 for Zero-Shot 3D Instance Segmentation},
+  author={Zhao, Jihuai and Zhuo, Junbao and Chen, Jiansheng and Ma, Huimin},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={19325--19334},
+  year={2025}
+}
+```

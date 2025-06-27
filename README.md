@@ -91,7 +91,9 @@ python dataprocess/get_posed_images.py
    cd segtrack
    python seg_tracking.py
    ```
-   The results will be stored at `segtrack/outputs`.
+   The results will be stored at `segtrack/outputs`. `result*` folders: Store the visualizations of the masks overlaid on the images. `mask*` folders: Store the raw mask files. The suffixes on these folders denote the tracking direction: `No suffix`: Results from forward tracking. `_rev` suffix: Results from backward tracking. `_merge` suffix: Merged results from bidirectional tracking.
+
+
 
 
 The code will be updated within 5 days.

@@ -129,7 +129,7 @@ for scene_id in video_dir_scene_ids:
 
     # init video predictor state
     inference_state = video_predictor.init_state(video_path=video_dir, offload_video_to_cpu=True, async_loading_frames=True)
-    inference_state_rev = video_predictor_rev.init_state(video_path=video_dir, reverse=True, offload_video_to_cpu=True, async_loading_frames=True)
+    inference_state_rev = video_predictor_rev.init_state(video_path=video_dir, offload_video_to_cpu=True, async_loading_frames=True)
 
     sam2_masks = MaskDictionaryModel()
     PROMPT_TYPE_FOR_VIDEO = "mask" # box, mask or point
